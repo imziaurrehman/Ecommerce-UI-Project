@@ -1,7 +1,7 @@
 import 'package:ecommerce_mobile_app/consts.dart';
 import 'package:flutter/material.dart';
 import './splash_content.dart';
-import '../../../sizeConfig.dart';
+import 'package:ecommerce_mobile_app/sizeConfig.dart';
 import '../../../components/default_button.dart';
 import '../../signin/signin_screen.dart';
 
@@ -26,6 +26,7 @@ class _BodyState extends State<Body> {
       "image": "assets/images/splash_3.png"
     },
   ];
+
 
   PageController _pageController = PageController();
 

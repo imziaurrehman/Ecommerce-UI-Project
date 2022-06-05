@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../sizeConfig.dart';
-import '../consts.dart';
+import 'package:ecommerce_mobile_app/sizeConfig.dart';
+import 'package:ecommerce_mobile_app/consts.dart';
 
 class DefaultButtons extends StatelessWidget {
   DefaultButtons({required this.text, required this.button});

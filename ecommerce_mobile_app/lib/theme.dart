@@ -40,7 +40,7 @@ AppBarTheme appBarTheme() {
     brightness: Brightness.light,
     centerTitle: true,
     elevation: 0.0,
-    toolbarHeight: getPropotionatelayoutheight(85),
+    toolbarHeight: 85,
     iconTheme: IconThemeData(color: Colors.black),
     titleTextStyle: TextTheme(
       headline6: TextStyle(

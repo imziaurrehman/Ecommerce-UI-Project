@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../consts.dart';
-import '../../../sizeConfig.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ecommerce_mobile_app/sizeConfig.dart';
 
 class SplashContent extends StatelessWidget {
   final String? text, image;
