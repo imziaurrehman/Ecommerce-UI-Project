@@ -21,9 +21,12 @@ class DefaultButtons extends StatelessWidget {
         style: TextButton.styleFrom(
           animationDuration: kAnimationDefaultDuration,
           backgroundColor: kprimarycolor,
-          primary: kprimarylightcolor,
+          primary: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18),
+          ),
+          textStyle: TextStyle(
+            fontWeight: FontWeight.w500,
           ),
         ),
       ),

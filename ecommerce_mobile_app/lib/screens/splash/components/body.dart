@@ -28,7 +28,7 @@ class _BodyState extends State<Body> {
   ];
 
 
-  PageController _pageController = PageController();
+  // PageController _pageController = PageController();
 
   int currentpage = 0;
   @override
@@ -42,8 +42,9 @@ class _BodyState extends State<Body> {
               child: Container(
                 // color: Colors.black12,
                 child: PageView.builder(
-                  controller: _pageController,
+                  // controller: _pageController,
                   itemCount: splashData.length,
+                  
                   onPageChanged: (value) {
                     setState(() {
                       currentpage = value;

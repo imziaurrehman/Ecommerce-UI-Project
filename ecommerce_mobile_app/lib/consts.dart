@@ -13,3 +13,10 @@ const String? kfontfamilybold = "assets/fonts/muli/Muli-Bold.ttf";
 const kfontfamilylight = "assets/fonts/muli/Muli-Light.ttf";
 const kAnimationDuration = Duration(milliseconds: 200);
 const kAnimationDefaultDuration = Duration(milliseconds: 260);
+
+
+
+
+OutlineInputBorder outlineInputBorder(){
+  return OutlineInputBorder(borderRadius: BorderRadius.circular(25),gapPadding: 5.0,);
+}

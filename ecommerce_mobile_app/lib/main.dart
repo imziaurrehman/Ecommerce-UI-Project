@@ -2,6 +2,7 @@ import 'package:ecommerce_mobile_app/routes.dart';
 import 'package:flutter/material.dart';
 import './screens/splash/splash_screen.dart';
 import './theme.dart';
+import './web-scroll-behaviour.dart';
 
 
 void main() {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      scrollBehavior: AppScrollBehaviour(),
       title: 'Flutter Demo',
       theme: theme(),
       initialRoute: Splash_Screen.routeName,
@@ -42,3 +44,4 @@ Step-1 Step by step 3 commands to upload modified files/folders.
 → 2. git commit -m "description"
 → 3. git push -u origin branchName
 */
+//token_access --> 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   
