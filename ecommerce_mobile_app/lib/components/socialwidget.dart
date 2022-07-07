@@ -18,8 +18,8 @@ final Function? onPressed;
       child: Container(
         padding: EdgeInsets.all(10),
         child: SvgPicture.asset(icon!),
-        width: getPropotionatelayoutWidth(35),
-        height: getPropotionatelayoutheight(40),
+        width: getPropotionatelayoutWidth(40),
+        height: getPropotionatelayoutheight(45),
         decoration: BoxDecoration(
           color: Color(0xFFF5F6F9),
           shape: BoxShape.circle,

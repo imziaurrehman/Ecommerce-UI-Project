@@ -1,5 +1,5 @@
 import 'package:ecommerce_mobile_app/components/default_button.dart';
-import 'package:ecommerce_mobile_app/components/suffixIcon.dart';
+import 'package:ecommerce_mobile_app/screens/home/home-screen.dart';
 import 'package:ecommerce_mobile_app/screens/signin/login_success/login_success_text.dart';
 import 'package:ecommerce_mobile_app/sizeConfig.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +41,10 @@ class body extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 75, vertical: 50),
             child: DefaultButtons(
               text: "Back to home",
-              button: () {},
+              button: () {
+                //home-screen
+                Navigator.of(context).pushReplacementNamed(Home_Screen.routeName);
+              },
             ),
           ),
         ),

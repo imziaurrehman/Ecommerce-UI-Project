@@ -1,84 +1,63 @@
-import 'package:ecommerce_mobile_app/screens/signin/components/rich_text.dart';
+import 'package:ecommerce_mobile_app/components/no_account_txt.dart';
+import 'package:ecommerce_mobile_app/components/socialwidget.dart';
+import 'package:ecommerce_mobile_app/consts.dart';
 import 'package:ecommerce_mobile_app/sizeConfig.dart';
 import 'package:flutter/material.dart';
 import 'formsfields.dart';
-import 'no_account_txt.dart';
-import 'socialwidget.dart';
 
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        FocusScope.of(context).requestFocus(FocusNode());
-      },
-      child: Padding(
-        padding: EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            Expanded(
-              flex: 3,
-              child: Container(
-                width: double.infinity,
-                // color: Colors.blueGrey,
-                child: TextRich(),
-              ),
-            ),
-            Spacer(),
-            Expanded(
-              flex: 8,
-              child: Container(
-                // color: Colors.grey,
-                width: double.infinity,
-                child: formfields(),
-              ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                // color: Colors.grey,
-                child: Row(
+    return SafeArea(
+      child: SizedBox(
+        width: double.infinity,
+        child: Padding(
+          padding:
+              EdgeInsets.symmetric(horizontal: getPropotionatelayoutWidth(20)),
+          child: SingleChildScrollView(
+            // padding: EdgeInsets.only(
+            //     bottom: SizeConfig.screen_height * 0.2, top: 20),
+            child: Column(
+              children: [
+                Text(
+                  "Welcome Back",
+                  style: headingStyle,
+                ),
+                Text(
+                  "\nSign in with your email and password  \nor continue with social media",
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: SizeConfig.screen_height * 0.1,
+                ),
+                SigninFormfields(),
+                SizedBox(
+                  height: getPropotionatelayoutheight(55),
+                ),
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     socialwidget(
                       icon: "assets/icons/google-icon.svg",
-                      onPressed: () {
-                        print("object");
-                      },
-                    ),
-                    SizedBox(
-                      width: getPropotionatelayoutWidth(6.0),
+                      onPressed: () {},
                     ),
                     socialwidget(
                       icon: "assets/icons/facebook-2.svg",
-                      onPressed: () {
-                        print("object");
-                      },
-                    ),
-                    SizedBox(
-                      width: getPropotionatelayoutWidth(6.0),
+                      onPressed: () {},
                     ),
                     socialwidget(
                       icon: "assets/icons/twitter.svg",
-                      onPressed: () {
-                        print("object");
-                      },
+                      onPressed: () {},
                     ),
                   ],
                 ),
-              ),
+                SizedBox(
+                  height: getPropotionatelayoutheight(20),
+                ),
+                No_account_txt(),
+              ],
             ),
-            SizedBox(
-              height: getPropotionatelayoutheight(10.0),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                // color: Colors.blueAccent,
-                child: no_account_txt(),
-              ),
-            )
-          ],
+          ),
         ),
       ),
     );

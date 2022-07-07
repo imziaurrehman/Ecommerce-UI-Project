@@ -8,8 +8,12 @@ class SuffixIcons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(0, getPropotionatelayoutWidth(10), getPropotionatelayoutWidth(20), getPropotionatelayoutWidth(20)),
-      child: SvgPicture.asset(svgIcon,width: getPropotionatelayoutWidth(18),),
+      padding: EdgeInsets.fromLTRB(0, getPropotionatelayoutWidth(10),
+          getPropotionatelayoutWidth(20), getPropotionatelayoutWidth(10)),
+      child: SvgPicture.asset(
+        svgIcon,
+        width: getPropotionatelayoutWidth(18),
+      ),
     );
   }
 }

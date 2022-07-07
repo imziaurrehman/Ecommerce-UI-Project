@@ -4,7 +4,6 @@ import './screens/splash/splash_screen.dart';
 import './theme.dart';
 import './web-scroll-behaviour.dart';
 
-
 void main() {
   runApp(const MyApp());
 }

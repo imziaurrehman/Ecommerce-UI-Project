@@ -1,3 +1,4 @@
+import 'package:ecommerce_mobile_app/consts.dart';
 import 'package:flutter/material.dart';
 
 class BackArrowNavBtn extends StatelessWidget {
@@ -7,20 +8,20 @@ class BackArrowNavBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
+    return GestureDetector(
       child: SizedBox(
         child: iconData(),
-        width: 10,
-        height: 2,
+        width: 20,
+        height: 20,
       ),
-      onPressed: () => Navigator.pop(context),
+      onTap: () => Navigator.pop(context),
     );
   }
 
   Icon iconData() {
     return Icon(
-      Icons.arrow_back_ios,
-      color: Colors.black,
+      Icons.arrow_back_ios_new,
+      color: ksecondarycolor,
     );
   }
 }

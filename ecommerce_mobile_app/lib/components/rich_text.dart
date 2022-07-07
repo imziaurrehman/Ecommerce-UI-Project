@@ -5,7 +5,10 @@ import 'package:ecommerce_mobile_app/sizeConfig.dart';
 class TextRich extends StatelessWidget {
   const TextRich({
     Key? key,
+    required this.text,
+    required this.description
   }) : super(key: key);
+  final String text , description;
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +16,14 @@ class TextRich extends StatelessWidget {
       textAlign: TextAlign.center,
       text: TextSpan(children: [
         TextSpan(
-            text: "Welcome Back\n",
+            text: text,
             style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w600,
                 fontSize: getPropotionatelayoutheight(30))),
         TextSpan(
             text:
-                "\nSign in with your email and password  \nor continue with social media",
+                description,
             style: TextStyle(
               fontFamily: kfontfamilybold,
               color: ksecondarycolor,
