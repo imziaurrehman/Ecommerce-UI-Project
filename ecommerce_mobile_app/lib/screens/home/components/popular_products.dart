@@ -67,12 +67,12 @@ class PproductsList extends StatelessWidget {
   // final GestureTapCallback press;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: () {
         Navigator.pushReplacementNamed(context, Detail_Screen.routeName,
             arguments: ProductsArguments(products: products));
       },
-      borderRadius: BorderRadius.circular(20),
+      // borderRadius: BorderRadius.circular(20),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Container(
           height: getPropotionatelayoutheight(130),
@@ -96,12 +96,16 @@ class PproductsList extends StatelessWidget {
             // width: 150,
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 10),
+        Container(
+          padding: const EdgeInsets.only(left: 10, bottom: 10),
+          width: getPropotionatelayoutWidth(110),
           child: RichText(
             text: TextSpan(
                 text: "${products.title}\n",
-                style: TextStyle(color: kprimarycolor.withOpacity(0.8)),
+                style: TextStyle(
+                    color: kprimarycolor.withOpacity(
+                  0.8,
+                )),
                 children: [
                   TextSpan(
                     text: "\$${products.amount}",
@@ -112,7 +116,8 @@ class PproductsList extends StatelessWidget {
                   )
                 ]),
             maxLines: 3,
-            textScaleFactor: 0.9,
+            textScaleFactor: 0.95,
+            overflow: TextOverflow.ellipsis,
           ),
         ),
       ]),
